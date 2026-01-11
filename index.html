@@ -1,88 +1,90 @@
-<!DOCTYPE html>
-
+﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="img/logo.png">
-        <title>Thomas Tsolakis</title>
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thomakos</title>
+  <link rel="icon" href="image/main_logo.png"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo"><a href="index.html"><img src="image/main_logo.png" alt="Main Logo"></a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#projects-section">Projects</a></li>
+      <li><a href="#match-section">Upcoming Matches</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
 
-    <body>
-        <div class="container">
-            <header>
-              <div class="brand">
-                <div class="avatar">
-                    <img src="img/logo.png" alt="Thomas Tsolakis logo">
-                  </div>
-                <div>
-                  <h1 class="name">Thomas Tsolakis</h1>
-                  <p class="subtitle">16 • Student • Game & Bot & Programm Developer</p>
-                </div>
-              </div>
-              <nav class="nav">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-              </nav>
-            </header>
-        
-            <main>
-              <section id="home" class="card hero">
-                <h2>Hello — I build games, bots and websites.</h2>
-                <p>I create bots, games and web projects. I like computers, networks and multiple I.T sections. Welcome to my portfolio.</p>
-                <div class="cta">
-                  <a href="#projects" class="button">See my projects</a>
-                  <a href="#contact" class="button ghost">Contact me</a>
-                </div>
-              </section>
-        
-              <section id="about" class="card">
-                <h3>About me</h3>
-                <p>I'm a 16-year-old vocational high-school student. I enjoy learning programming and making small games and tools. I work on Discord bots and small game titles.</p>
-                <ul>
-                  <li>Programming Languages: Python, C/C++, discord.py, Lua, HTML/CSS</li>
-                  <li>Interests: game development, bots, web development</li>
-                </ul>
-              </section>
-        
-              <section id="projects" class="card">
-                <h3>Projects</h3>
-                <div class="grid">
-                  <article class="project">
-                    <h4>Wolly — Discord Bot</h4>
-                    <p>Moderation, logs, mini-games and utilities. Built with discord.js.</p>
-                    <a href="src/wolly.html" class="button small">View Images</a>
-                  </article>
-              
-                  <article class="project">
-                    <h4>Discord Bots</h4>
-                    <p>Moderation, logs, mini-games and utilities. Built with discord.py.</p>
-                    <a href="src/discordbots.html" class="button small">View Images</a>
-                  </article>
-              
-                  <article class="project">
-                    <h4>Robotics</h4>
-                    <p>I made robots that run on international level.</p>
-                    <a href="src/robotics.html" class="button small">View Images</a>
-                  </article>
-                </div>
-              </section>
-              
-        
-              <section id="contact" class="card">
-                <h3>Contact</h3>
-                <p>You can reach me on Discord: <strong>.thomasts</strong></p>
-                <p>Email: <em>thomasts1801@gmail.com</em></p>
-                <p>Links: GitHub / Roblox profile / YouTube</p>
-              </section>
-            </main>
-        
-            <footer class="footer">
-              <p>Made by ThomasTs</p>
-            </footer>
+  <section class="hero">
+    <h1>Thomakos</h1>
+    <div class="typing-container">
+      <span id="typing-text"></span>
+      <span class="cursor">|</span>
+    </div>
+  </section>
+
+  <div class="center-box">
+    <div class="projects-section" id="projects-section">
+      <div class="glow-container">
+        <h1 class="glow-title">MY PROJECTS</h1>
+  
+        <div class="glow-box project-box" onclick="goToTomWarps()">
+          <img src="img/logos/tomwarps.png" class="project-logo">
+          <div class="project-text">
+            <h2>TomWarps</h2>
+            <p>High-performance warp system with customizable countdowns, action bar timers, and beautiful portal particles.</p>
           </div>
-    </body>
+        </div>
+        <div class="glow-box project-box" onclick="goToTomExpensive()">
+          <img src="img/logos/tomexpensive.png" class="project-logo">
+          <div class="project-text">
+            <h2>TomExpensive</h2>
+            <p>A lightweight, no-config utility that removes the "Too Expensive!" level cap from Anvils. Fully compatible with Minecraft 1.21+ and designed for maximum performance.</p>
+          </div>
+        </div>        
+        <div class="glow-box project-box" onclick="goToMcLeader()">
+          <img src="img/logos/mcleader.png" class="project-logo">
+          <div class="project-text">
+            <h2>MC PVP Leader Website</h2>
+            <p>Friendly leaderboard & stats website for mc 1.9+ pvp system in official kits with real-time data from mctiers API.</p>
+          </div>
+        </div>        
+        <div class="glow-box coming-soon">
+          <h2>Coming Soon...</h2>
+          <p>New secret projects are currently in development. Stay tuned 👀</p>
+        </div>
+  
+      </div>
+    </div>
+    <div class="links-section" id="links-section">
+      <div class="glow-container">
+        <h1 class="glow-title">IMPORTANT LINKS</h1>
+  
+        <div class="glow-box project-box link-box" onclick="goToDiscord()">
+          <img src="img/logos/discord.png" class="project-logo">
+          <div class="project-text">
+            <h2>Discord Server</h2>
+            <p>Join our official Discord community for updates, support and announcements.</p>
+          </div>
+        </div>
+  
+        <div class="glow-box project-box link-box" onclick="goToModrinth()">
+          <img src="img/logos/modrinth.png" class="project-logo">
+          <div class="project-text">
+            <h2>Modrinth Profile</h2>
+            <p>Check out all our public Minecraft projects and releases on Modrinth.</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>  
+  <footer class="footer">
+    <p>Created by Thomas &copy; 2025-2026</p>
+  </footer>  
+  <script src="script.js"></script>
+</body>
 </html>
