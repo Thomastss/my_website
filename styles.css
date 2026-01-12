@@ -276,25 +276,120 @@ nav a:hover {
 
 
 /* ====== RESPONSIVE ====== */
+/* ================= MOBILE FIX ================= */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 30px;
+
+  body {
+    overflow-x: hidden;
   }
 
-  .developer, .newsletter, .sponsors {
+  /* NAVBAR */
+  nav {
+    padding: 12px 15px;
+  }
+
+  nav .logo img {
+    height: 40px;
+    width: 40px;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 350px;
+    padding-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
     text-align: center;
   }
 
-  .sponsor-logos {
-    justify-content: center;
+  .typing-container {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* CENTER BOX */
+  .center-box {
+    width: 95%;
+    margin: 30px auto;
+    padding: 30px 15px;
+  }
+
+  /* GLOW */
+  .glow-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .glow-container {
+    gap: 20px;
   }
 
   .glow-box {
-    width: 90%;
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
   }
 
-  .center-box {
-    width: 90%;
+  .glow-box p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* PROJECTS */
+  .project-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .project-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .project-text h2 {
+    font-size: 18px;
+  }
+
+  .project-text p {
+    font-size: 14px;
+  }
+
+  /* ABOUT TEXT */
+  .about-text {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  /* DISCORD API */
+  .discord-api {
+    float: none;
+    padding: 20px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .discord-api iframe {
+    width: 100%;
+    max-width: 320px;
+    height: 400px;
+  }
+
+  /* FOOTER (δεν αλλάζουμε design, μόνο spacing) */
+  .footer {
+    font-size: 13px;
+    padding: 12px 5px;
   }
 }

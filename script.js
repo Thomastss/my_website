@@ -1,5 +1,5 @@
 const texts = [
-  "Welcome to my webite",
+  "Welcome to my website",
   "🐍Python",
   "💻HTML",
   "🍵Java"
