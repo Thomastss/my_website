@@ -10,7 +10,7 @@ body {
   background: #0f0f14;
   color: #b0bec5;
   overflow-x: hidden;
-  cursor: url('image/main_logo.png'), default;
+  cursor: url('img/main_logo.png'), default;
 }
 
 /* ====== NAVBAR ====== */
@@ -36,7 +36,7 @@ nav .logo {
 
 nav .logo img {
   height: 50px;
-  width: 40px;
+  width: 50px;
 }
 
 nav ul {
@@ -75,7 +75,7 @@ nav a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('image/hero.png') center/90% no-repeat;
+  background: url('img/hero.png') center/90% no-repeat;
   filter: blur(4px);
   transform: scale(1.1);
   z-index: -1;
@@ -262,6 +262,16 @@ nav a:hover {
   margin: 0;
   color: #b0bec5;
   line-height: 1.4;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.9;
 }
 
 
