@@ -42,30 +42,5 @@
   <footer class="footer">
     <p>Created by Thomas &copy; 2025-2026</p>
   </footer>
-  <div class="floating-contact" onclick="toggleForm()">
-    <img src="../img/logos/gmail.png" class="floating-icon" alt="Contact Me" height="50" width="50">
-  </div>
-
-  <div class="contact-card" id="contactCard">
-      <div class="card-header">
-          <h3>Send me a message ✉️</h3>
-          <button onclick="toggleForm()" class="close-btn">&times;</button>
-      </div>
-      <form action="https://formspree.io/f/xvzzoypy" method="POST">
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Reason for contact..." required></textarea>
-          <button type="submit">Send Message</button>
-      </form>
-  </div> 
-<script>
-  function toggleForm() {
-    const card = document.getElementById('contactCard');
-    if (card.style.display === 'flex') {
-        card.style.display = 'none';
-    } else {
-        card.style.display = 'flex';
-    }
-    }
-</script>
 </body>
 </html>
