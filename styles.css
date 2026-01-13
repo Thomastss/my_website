@@ -136,16 +136,53 @@ nav a:hover {
   50% { opacity: 0; }
 }
 
-/* ====== DISCORD API ====== */
-.discord-api {
-  float: right;
-  padding: 50px;  
-  margin-left: 30px;
+.link-box { 
+  display: flex;
+  flex-direction: row;      /* Logo και κείμενο δίπλα-δίπλα */
+  align-items: center;       /* Κάθετο κεντράρισμα */
+  justify-content: center;   /* Οριζόντιο κεντράρισμα όλου του γκρουπ */
+  padding: 0 40px;           /* Προσθέτουμε κενό αριστερά-δεξιά */
+  gap: 30px;                 /* Σταθερή απόσταση logo από κείμενο */
+  width: 750px;
+  height: 150px;
+  margin: 0 auto;
 }
 
-.discord-api iframe {
-  width: 500px;
-  height: 500px;
+.link-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;   /* Ο τίτλος και η περιγραφή ξεκινούν από την ίδια ευθεία */
+  text-align: left;          /* Στοίχιση κειμένου αριστερά για ευανάγνωστη μορφή */
+}
+
+/* Σιγουρέψου ότι οι τίτλοι δεν έχουν κρυφά margins που χαλάνε το κέντρο */
+/* Χρώμα για τους τίτλους στα Important Links */
+.link-text h2 {
+  color: #00e5ff; /* Το Cyan χρώμα σου */
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.5); /* Ελαφρύ glow για να ταιριάζει με το στυλ */
+  margin-bottom: 5px;
+}
+
+/* Αν θέλεις η περιγραφή (p) να παραμείνει γκρι/λευκή για να διαβάζεται εύκολα */
+.link-text p {
+  color: #b0bec5; 
+  font-size: 15px;
+}
+/* Συγκεκριμένο χρώμα για το Discord */
+.glow-box[onclick*="Discord"] h2 {
+  color: #7289da; /* Το κλασικό χρώμα του Discord */
+}
+
+/* Συγκεκριμένο χρώμα για το Modrinth */
+.glow-box[onclick*="Modrinth"] h2 {
+  color: #1bd964; /* Το πράσινο του Modrinth */
+}
+
+.glow-box[onclick*="GitHub"] h2 {
+  color: #ffffff; /* Το λευκό του GitHub */
 }
 
 /* ====== CENTER BOX ====== */
@@ -199,6 +236,72 @@ nav a:hover {
     0 0 30px rgba(30, 136, 229, 0.5),
     0 0 45px rgba(30, 136, 229, 0.4);
 }
+/* WARP - CYAN */
+.glow-box-warp {
+  width: 750px;
+  height: 150px;
+  background-color: #1a1a1f;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 229, 255, 0.6);
+  box-shadow:
+    0 0 10px rgba(0, 229, 255, 0.4),
+    0 0 20px rgba(0, 229, 255, 0.3),
+    0 0 30px rgba(0, 229, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.glow-box-warp:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px rgba(0, 229, 255, 0.6),
+    0 0 30px rgba(0, 229, 255, 0.5),
+    0 0 45px rgba(0, 229, 255, 0.4);
+}
+
+/* EXP - PURPLE */
+.glow-box-exp {
+  width: 750px;
+  height: 150px;
+  background-color: #1a1a1f;
+  border-radius: 15px;
+  border: 2px solid rgba(186, 85, 211, 0.6);
+  box-shadow:
+    0 0 10px rgba(186, 85, 211, 0.4),
+    0 0 20px rgba(148, 0, 211, 0.3),
+    0 0 30px rgba(148, 0, 211, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.glow-box-exp:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px rgba(186, 85, 211, 0.6),
+    0 0 30px rgba(148, 0, 211, 0.5),
+    0 0 45px rgba(148, 0, 211, 0.4);
+}
+
+/* MCLEADER - GOLD */
+.glow-box-mcleader {
+  width: 750px;
+  height: 150px;
+  background-color: #1a1a1f;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 193, 7, 0.6);
+  box-shadow:
+    0 0 10px rgba(255, 193, 7, 0.4),
+    0 0 20px rgba(255, 160, 0, 0.3),
+    0 0 30px rgba(255, 160, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.glow-box-mcleader:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px rgba(255, 193, 7, 0.6),
+    0 0 30px rgba(255, 160, 0, 0.5),
+    0 0 45px rgba(255, 160, 0, 0.4);
+}
+
 
 /* Error / none */
 .none {
@@ -245,11 +348,93 @@ nav a:hover {
   padding: 20px;
 }
 
+/* Το container που περιέχει τα tags */
+.tech-stack {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center; /* Αυτό τα φέρνει στο κέντρο οριζόντια */
+  align-items: center;
+}
+
+/* Τα ίδια τα tags */
+.tech-stack span {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase; /* Προαιρετικό: κάνει τα γράμματα κεφαλαία για πιο pro look */
+  transition: all 0.3s ease;
+}
+
+/* --- 1. TomWarps (Π.χ. Μωβ/Magenta) --- */
+/* --- 1. TomWarps (Cyan) --- */
+.glow-box-warp:hover .tech-stack span {
+  border-color: #00ffff; 
+  background: rgba(0, 255, 255, 0.15);
+  color: #00ffff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+/* --- 2. TomExpensive (Purple) --- */
+.glow-box-exp:hover .tech-stack span {
+  border-color: #bf00ff; 
+  background: rgba(191, 0, 255, 0.15);
+  color: #bf00ff;
+  box-shadow: 0 0 12px rgba(191, 0, 255, 0.4);
+}
+
+/* --- 3. MC PVP Leader (Gold) --- */
+.glow-box-mcleader:hover .tech-stack span {
+  border-color: #ffca2c; 
+  background: rgba(255, 202, 44, 0.15);
+  color: #ffca2c;
+  box-shadow: 0 0 12px rgba(255, 202, 44, 0.4);
+}
+
+/* Σιγουρέψου ότι και τα κείμενα (h2, p) είναι κεντραρισμένα */
+.project-text-warp, .project-text-exp, .project-text-mcleader {
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .project-logo {
   width: 70px;
   height: 70px;
   object-fit: contain;
   filter: drop-shadow(0 0 5px #00e5ff) drop-shadow(0 0 10px #1e88e5);
+  flex-shrink: 0;
+}
+
+.project-logo-warp {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px #00e5ff) drop-shadow(0 0 10px #00e5ff);
+  flex-shrink: 0;
+}
+
+/* EXP - PURPLE */
+.project-logo-exp {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px #ba55d3) drop-shadow(0 0 10px #9400d3);
+  flex-shrink: 0;
+}
+
+/* MCLEADER - GOLD */
+.project-logo-mcleader {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px #ffc107) drop-shadow(0 0 10px #ffa000);
   flex-shrink: 0;
 }
 
@@ -264,6 +449,39 @@ nav a:hover {
   line-height: 1.4;
 }
 
+.project-text-warp h2 {
+  margin: 0 0 8px 0;
+  color: #00e5ff;
+}
+
+.project-text-warp p {
+  margin: 0;
+  color: #b0bec5;
+  line-height: 1.4;
+}
+
+.project-text-exp h2 {
+  margin: 0 0 8px 0;
+  color: #9400d3;
+}
+
+.project-text-exp p {
+  margin: 0;
+  color: #b0bec5;
+  line-height: 1.4;
+}
+
+.project-text-mcleader h2 {
+  margin: 0 0 8px 0;
+  color: #ffc107;
+}
+
+.project-text-mcleader p {
+  margin: 0;
+  color: #b0bec5;
+  line-height: 1.4;
+}
+
 .about-text {
   max-width: 800px;
   margin: 0 auto;
@@ -273,7 +491,161 @@ nav a:hover {
   line-height: 1.8;
   opacity: 0.9;
 }
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 20px;
+}
 
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-item i {
+  font-size: 50px; /* Μέγεθος εικονιδίου */
+  margin-bottom: 10px;
+}
+
+.skill-item span {
+  font-size: 14px;
+  color: #b0bec5;
+  font-weight: bold;
+}
+
+/* Hover εφέ: Το εικονίδιο μεγαλώνει και φωτίζει */
+.skill-item:hover {
+  transform: translateY(-10px);
+}
+
+.skill-item:hover i {
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.8));
+}
+/* Το wrapper της μπάρας */
+.skill-progress-wrapper {
+  margin-top: 10px;
+  width: 80px;            /* Το πλάτος της μπάρας */
+  opacity: 0;             /* Κρυφό αρχικά */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px); /* Μικρό εφέ κίνησης προς τα πάνω */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Εμφάνιση στο Hover */
+.skill-item:hover .skill-progress-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Η βάση της μπάρας */
+.skill-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+/* Το γεμάτο κομμάτι (πρόοδος) */
+.skill-percentage {
+  height: 100%;
+  background: linear-gradient(90deg, #00e5ff, #1e88e5); /* Gradient χρώμα */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+/* Το κείμενο του ποσοστού */
+.pct-text {
+  font-size: 11px !important;
+  color: #00e5ff !important;
+  font-weight: bold;
+}
+/* Το κουμπί που επιπλέει */
+.floating-contact {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #00e5ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+  z-index: 2000;
+  transition: transform 0.3s ease;
+}
+
+.floating-contact:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* Η κάρτα της φόρμας */
+.contact-card {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 300px;
+  background: #1a1a1f;
+  border: 2px solid #00e5ff;
+  border-radius: 15px;
+  padding: 20px;
+  display: none; /* Κρυφό αρχικά */
+  flex-direction: column;
+  z-index: 2000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-header h3 { color: #00e5ff; font-size: 18px; margin: 0; }
+
+.close-btn { 
+  background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; 
+}
+
+/* Styling για τα inputs */
+.contact-card input, .contact-card textarea {
+  width: 100%;
+  background: #0f0f14;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-card button[type="submit"] {
+  background: #00e5ff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-card button[type="submit"]:hover {
+  background: #00b8d4;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
 
 /* ====== RESPONSIVE ====== */
 /* ================= MOBILE FIX ================= */

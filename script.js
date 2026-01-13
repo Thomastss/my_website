@@ -21,7 +21,7 @@ const texts = [
       setTimeout(type, speed);
     } else {
       setTimeout(erase, 1500); // wait before erase
-    }
+    }s
   }
   
   function erase() {
@@ -60,4 +60,17 @@ const texts = [
   function goToModrinth() {
     window.open("https://modrinth.com/user/Thomakosxd", "_blank");
   }
+
+  function goToGitHub() {
+    window.open("https://github.com/Thomastss", "_blank");
+  }
+
+  function toggleForm() {
+    const card = document.getElementById('contactCard');
+    if (card.style.display === 'flex') {
+        card.style.display = 'none';
+    } else {
+        card.style.display = 'flex';
+    }
+}
   
