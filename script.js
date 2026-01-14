@@ -54,7 +54,7 @@ const texts = [
   }
 
   function goToDiscord() {
-    window.open("https://discord.gg/EfuTrGmBXt", "_blank");
+    window.open("https://discord.gg/4YDMkn5u3y", "_blank");
   }
   
   function goToModrinth() {
