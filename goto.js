@@ -25,3 +25,7 @@ function goToGitHub() {
 function goToEmail() {
     window.location.href='mailto:thomasts1801@gmail.com'
 }
+
+function goToAutoSlow() {
+    window.open("https://github.com/Thomastss/AutoSlowModeBot.py", "_blank");
+}
