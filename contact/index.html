@@ -22,7 +22,7 @@
   <div class="hero">
     <h1>THOMAS</h1>
     <div class="typing-container">
-      <span>HOW TO CONTACT ME?</span><span class="cursor">|</span>
+      <span>HOW TO CONTACT ME?📞</span><span class="cursor">|</span>
     </div>
   </div>
 
@@ -37,7 +37,7 @@
             <p>discord.gg/4YDMkn5u3y</p>
         </div>
       </div>
-      <div class="glow-box" onclick="window.location.href='mailto:thomasts1801@gmail.com'">
+      <div class="glow-box" onclick="goToEmail()">
         <div class="project-text">
             <h2>EMAIL</h2>
             <p>thomasts1801@gmail.com</p>
@@ -67,18 +67,7 @@
           <button type="submit">Send Message</button>
       </form>
   </div> 
-<script>
-    function goToDiscord() {
-    window.open("https://discord.gg/4YDMkn5u3y", "_blank");
-    }
-    function toggleForm() {
-    const card = document.getElementById('contactCard');
-    if (card.style.display === 'flex') {
-        card.style.display = 'none';
-    } else {
-        card.style.display = 'flex';
-    }
-    }
-</script>
+<script src="../form.js"></script>
+<script src="../goto.js"></script>
 </body>
 </html>

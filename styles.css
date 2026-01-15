@@ -10,7 +10,6 @@ body {
   background: #0f0f14;
   color: #b0bec5;
   overflow-x: hidden;
-  cursor: url('img/main_logo.png'), default;
 }
 
 /* ====== NAVBAR ====== */
@@ -76,7 +75,7 @@ nav a:hover {
   position: absolute;
   inset: 0;
   background: url('img/hero.png') center/90% no-repeat;
-  filter: blur(4px);
+  filter: blur(2px);
   transform: scale(1.1);
   z-index: -1;
 }
@@ -302,6 +301,58 @@ nav a:hover {
     0 0 45px rgba(255, 160, 0, 0.4);
 }
 
+/* --- 4. AutoSlow Leader (Dark Blue) --- */
+.glow-box-autoslow:hover .tech-stack span {
+  border-color: #4fc3f7;
+  background: rgba(79, 195, 247, 0.15);
+  color: #4fc3f7;
+  box-shadow: 0 0 12px rgba(79, 195, 247, 0.5);
+}
+
+/* AUTOSLOW LOGO - DARK BLUE */
+.project-logo-autoslow {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 6px #2196f3)
+    drop-shadow(0 0 14px #0d47a1);
+  flex-shrink: 0;
+}
+
+/* AUTOSLOW TEXT */
+.project-text-autoslow h2 {
+  margin: 0 0 8px 0;
+  color: #4fc3f7;
+}
+
+.project-text-autoslow p {
+  margin: 0;
+  color: #90a4ae;
+  line-height: 1.4;
+}
+
+/* AutoSlow - Dark Blue Glow Box */
+.glow-box-autoslow {
+  width: 750px;
+  height: 150px;
+  background-color: #121826;
+  border-radius: 15px;
+  border: 2px solid rgba(33, 150, 243, 0.6);
+  box-shadow:
+    0 0 10px rgba(33, 150, 243, 0.4),
+    0 0 20px rgba(13, 71, 161, 0.35),
+    0 0 35px rgba(13, 71, 161, 0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.glow-box-autoslow:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px rgba(33, 150, 243, 0.7),
+    0 0 30px rgba(13, 71, 161, 0.6),
+    0 0 50px rgba(13, 71, 161, 0.45);
+}
 
 /* Error / none */
 .none {
@@ -395,8 +446,9 @@ nav a:hover {
   box-shadow: 0 0 12px rgba(255, 202, 44, 0.4);
 }
 
+
 /* Σιγουρέψου ότι και τα κείμενα (h2, p) είναι κεντραρισμένα */
-.project-text-warp, .project-text-exp, .project-text-mcleader {
+.project-text-warp, .project-text-exp, .project-text-mcleader, .project-text-autoslow {
   text-align: center; 
   display: flex;
   flex-direction: column;
