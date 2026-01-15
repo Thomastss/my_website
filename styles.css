@@ -1,4 +1,4 @@
-﻿* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -702,117 +702,85 @@ nav a:hover {
 /* ================= MOBILE FIX ================= */
 @media (max-width: 768px) {
 
-  body {
-    overflow-x: hidden;
-  }
+  body { overflow-x: hidden; }
 
   /* NAVBAR */
-  nav {
-    padding: 12px 15px;
-  }
-
-  nav .logo img {
-    height: 40px;
-    width: 40px;
-  }
-
-  nav ul {
-    gap: 12px;
-  }
-
-  nav a {
-    font-size: 14px;
-  }
+  nav { padding: 12px 15px; }
+  nav .logo img { height: 40px; width: 40px; }
+  nav ul { gap: 12px; }
+  nav a { font-size: 14px; }
 
   /* HERO */
-  .hero {
-    height: 350px;
-    padding-top: 60px;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-    text-align: center;
-  }
-
-  .typing-container {
-    font-size: 14px;
-    text-align: center;
-  }
+  .hero { height: 350px; padding-top: 60px; }
+  .hero h1 { font-size: 36px; text-align: center; }
+  .typing-container { font-size: 14px; text-align: center; }
 
   /* CENTER BOX */
-  .center-box {
-    width: 95%;
-    margin: 30px auto;
-    padding: 30px 15px;
-  }
+  .center-box { width: 95%; margin: 30px auto; padding: 30px 15px; }
 
-  /* GLOW */
-  .glow-title {
-    font-size: 26px;
-    text-align: center;
-  }
-
-  .glow-container {
-    gap: 20px;
-  }
-
-  .glow-box {
-    width: 100%;
-    height: auto;
+  /* GLOW BOXES (Όλα τα είδη) */
+  .glow-box, 
+  .glow-box-warp, 
+  .glow-box-exp, 
+  .glow-box-mcleader, 
+  .glow-box-autoslow {
+    width: 100% !important;
+    height: auto !important; /* Επιτρέπει στο κουτί να μεγαλώσει αν το κείμενο είναι πολύ */
     padding: 20px 10px;
   }
 
-  .glow-box p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  /* PROJECTS */
-  .project-box {
+  /* PROJECT BOX STRUCTURE */
+  .project-box, .link-box {
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+    gap: 15px;
   }
 
-  .project-logo {
+  /* PROJECT LOGOS (Όλα τα είδη) */
+  .project-logo, 
+  .project-logo-warp, 
+  .project-logo-exp, 
+  .project-logo-mcleader, 
+  .project-logo-autoslow {
     width: 55px;
     height: 55px;
   }
 
-  .project-text h2 {
+  /* PROJECT TEXTS (Όλα τα είδη) */
+  .project-text, 
+  .project-text-warp, 
+  .project-text-exp, 
+  .project-text-mcleader, 
+  .project-text-autoslow,
+  .link-text {
+    align-items: center; /* Κεντράρει τα στοιχεία μέσα στο flex */
+    text-align: center;
+  }
+
+  .project-text h2, 
+  .project-text-warp h2, 
+  .project-text-exp h2, 
+  .project-text-mcleader h2, 
+  .project-text-autoslow h2 {
     font-size: 18px;
   }
 
-  .project-text p {
+  .project-text p, 
+  .project-text-warp p, 
+  .project-text-exp p, 
+  .project-text-mcleader p, 
+  .project-text-autoslow p {
     font-size: 14px;
   }
 
-  /* ABOUT TEXT */
-  .about-text {
-    font-size: 15px;
-    line-height: 1.6;
-    padding: 0 10px;
-  }
-
-  /* DISCORD API */
-  .discord-api {
-    float: none;
-    padding: 20px 0;
-    margin: 0;
-    display: flex;
+  /* TECH STACK */
+  .tech-stack {
     justify-content: center;
   }
 
-  .discord-api iframe {
-    width: 100%;
-    max-width: 320px;
-    height: 400px;
-  }
+  /* ABOUT TEXT */
+  .about-text { font-size: 15px; line-height: 1.6; padding: 0 10px; }
 
-  /* FOOTER (δεν αλλάζουμε design, μόνο spacing) */
-  .footer {
-    font-size: 13px;
-    padding: 12px 5px;
-  }
+  /* FOOTER */
+  .footer { font-size: 13px; padding: 12px 5px; }
 }
