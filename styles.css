@@ -1,4 +1,4 @@
-* {
+﻿* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -696,6 +696,11 @@ nav a:hover {
 .contact-card button[type="submit"]:hover {
   background: #00b8d4;
   box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+.stats-svg {
+  width: 750px;
+  height: auto;
 }
 
 /* ====== RESPONSIVE ====== */
